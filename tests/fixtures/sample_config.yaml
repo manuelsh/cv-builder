@@ -1,0 +1,24 @@
+# Sample configuration for testing
+
+source_folders:
+  - folder_id_1
+  - folder_id_2
+
+output_folder: "output_folder_id"
+
+format:
+  max_pages: 2
+  language: en
+  style: modern
+  template: chronological
+
+content:
+  include_photo: false
+  contact_info:
+    - email
+    - phone
+    - linkedin
+
+other_instructions: |
+  Always highlight Python experience
+  Keep summary under 3 sentences

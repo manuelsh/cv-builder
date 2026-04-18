@@ -1,0 +1,41 @@
+Senior Machine Learning Engineer
+Company: TechCorp AI
+Location: Barcelona, Spain (Hybrid)
+Job Type: Full-time
+
+About the Role:
+We are looking for a Senior Machine Learning Engineer to join our AI team. You will be responsible for designing, building, and deploying machine learning models at scale.
+
+Required Skills:
+- 5+ years of experience in machine learning
+- Strong Python programming skills
+- Experience with PyTorch or TensorFlow
+- Knowledge of MLOps and model deployment
+- Experience with cloud platforms (AWS, GCP, or Azure)
+- Strong communication skills
+
+Nice to Have:
+- PhD in Computer Science or related field
+- Experience with LLMs and GenAI
+- Kubernetes experience
+- Experience leading technical teams
+
+Responsibilities:
+- Design and implement ML models for production use
+- Build and maintain ML pipelines
+- Collaborate with product teams to define ML solutions
+- Mentor junior engineers
+- Contribute to technical architecture decisions
+
+Qualifications:
+- MSc or PhD in Computer Science, Machine Learning, or related field
+- Track record of deploying ML models to production
+- Published research is a plus
+
+Salary: €80,000 - €120,000 + equity
+
+Benefits:
+- Flexible working hours
+- Remote work options
+- Health insurance
+- Learning budget

@@ -1,0 +1,22 @@
+# Local config and secrets
+.env
+.env.*
+!.env.example
+config.yaml
+credentials.json
+token.json
+
+# Local environments and caches
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Generated local output
+output/
+
+# Local tool/editor state
+.claude/
+
+# Node dependencies
+codex_bridge/node_modules/

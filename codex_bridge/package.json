@@ -1,0 +1,8 @@
+{
+  "name": "cv-builder-codex-bridge",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@openai/codex-sdk": "^0.120.0"
+  }
+}

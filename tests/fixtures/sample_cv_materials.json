@@ -1,0 +1,26 @@
+{
+  "documents": [
+    {
+      "source_folder": "folder_id_1",
+      "file_name": "Resume - John Doe.docx",
+      "file_type": "google_doc",
+      "content": "# John Doe\n\nBarcelona, Spain | john.doe@email.com | +34 612 345 678 | linkedin.com/in/johndoe\n\n## Summary\nExperienced ML Engineer with 8+ years building production ML systems.\n\n## Experience\n\n### Senior ML Engineer\nTechCorp, Barcelona\nJan 2020 - Present\n- Led team of 5 engineers building recommendation systems\n- Reduced model inference latency by 40%\n- Deployed 10+ models to production serving 1M+ users\n\n### ML Engineer\nDataCo, Madrid\nMar 2016 - Dec 2019\n- Built NLP models for text classification\n- Implemented MLOps pipelines using Kubernetes\n- Trained 20+ engineers on ML best practices\n\n## Education\n\n### MSc Computer Science\nUniversitat Politècnica de Catalunya, 2016\n\n### BSc Mathematics\nUniversidad Complutense de Madrid, 2014\n\n## Skills\n- Python, PyTorch, TensorFlow\n- AWS, GCP, Kubernetes\n- MLOps, Docker, CI/CD\n- Team leadership, Agile",
+      "metadata": {
+        "id": "doc_id_1",
+        "mimeType": "application/vnd.google-apps.document"
+      }
+    },
+    {
+      "source_folder": "folder_id_1",
+      "file_name": "Projects.docx",
+      "file_type": "google_doc",
+      "content": "# Notable Projects\n\n## Recommendation Engine (2023)\n- Built real-time recommendation system handling 10K requests/second\n- Used collaborative filtering + deep learning hybrid approach\n- Increased user engagement by 25%\n\n## GenAI Chatbot (2024)\n- Developed internal chatbot using LLMs\n- Integrated with company knowledge base\n- Reduced support tickets by 30%\n\n## ML Platform (2022)\n- Led development of internal ML platform\n- Reduced model deployment time from 2 weeks to 2 days\n- Adopted by 15 teams across the organization",
+      "metadata": {
+        "id": "doc_id_2",
+        "mimeType": "application/vnd.google-apps.document"
+      }
+    }
+  ],
+  "total_documents": 2,
+  "extraction_errors": []
+}

@@ -1,0 +1,46 @@
+# CV Builder Configuration
+
+# ===== SOURCE FOLDERS =====
+# Google Drive folders containing your CV materials (URLs or IDs)
+source_folders:
+  - https://drive.google.com/drive/folders/YOUR_FOLDER_ID_1
+  - YOUR_FOLDER_ID_2
+
+# ===== OUTPUT =====
+# Where to save generated CVs (URL or ID). If empty, uses first source folder
+output_folder: ""
+
+# ===== CV FORMAT =====
+format:
+  # Target page length (1, 2, or 3)
+  max_pages: 2
+
+  # CV language (en, es, de, fr, etc.)
+  language: en
+
+  # Writing style: formal, modern, creative, technical
+  style: modern
+
+  # CV structure: chronological, functional, combination
+  template: chronological
+
+# ===== CONTENT OPTIONS =====
+content:
+  # Include photo placeholder (common in EU CVs)
+  include_photo: false
+
+  # Contact details to include
+  contact_info:
+    - email
+    - phone
+    - linkedin
+    # Other options: github, address, website
+
+# ===== CUSTOM INSTRUCTIONS =====
+# Additional instructions for CV generation (free-form text)
+other_instructions: |
+  Example instructions (delete and replace with your own):
+  - Always highlight my Python and cloud experience
+  - Emphasize leadership and mentoring roles
+  - Keep the summary under 3 sentences
+  - Use metrics and numbers wherever possible
