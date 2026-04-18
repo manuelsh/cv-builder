@@ -156,7 +156,55 @@ cv-builder generate "..." --llm-backend codex-sdk
 
 ## Architecture
 
-`ConfigReader -> MaterialsGatherer -> JobAnalyzer -> CVGenerator -> DocFormatter`
+```mermaid
+flowchart LR
+    CLI[cv-builder CLI] --> ORCH[PipelineOrchestrator]
+
+    CFGFILE[config.yaml] --> A1[ConfigReaderAgent]
+    JOB[Job target<br/>URL, file, or text] --> A3[JobAnalyzerAgent]
+    DRIVE[(Google Drive)] --> A2[MaterialsGathererAgent]
+    DRIVE --> A5[DocFormatterAgent]
+    LLM[(LiteLLM or Codex SDK backend)] --> A3
+    LLM --> A4[CVGeneratorAgent]
+
+    ORCH --> A1
+    ORCH --> A2
+    ORCH --> A3
+    ORCH --> A4
+    ORCH --> A5
+
+    A1 --> C1[ConfigOutput]
+    C1 --> A2
+    C1 --> A4
+    C1 --> A5
+
+    A2 --> M1[MaterialsOutput]
+    A3 --> J1[JobAnalysisOutput]
+
+    M1 --> A4
+    J1 --> A4
+
+    A4 --> CV[CVContentOutput]
+    CV --> A5
+    CV --> DRY[Dry run JSON output]
+    A5 --> DOC[Formatted Google Doc]
+```
+
+Pipeline order:
+
+1. `ConfigReaderAgent` reads `config.yaml`, applies defaults, validates values, and normalizes Google Drive folder IDs.
+2. `MaterialsGathererAgent` reads documents from the configured Google Drive source folders.
+3. `JobAnalyzerAgent` turns the target job description into structured requirements.
+4. `CVGeneratorAgent` combines config, source materials, and job analysis to generate structured CV content.
+5. `DocFormatterAgent` turns that CV content into a Google Doc unless `--dry-run` is used.
+
+Agent roles:
+
+- `ConfigReaderAgent`: deterministic config parsing and validation, no LLM.
+- `MaterialsGathererAgent`: deterministic Google Drive ingestion, no LLM.
+- `JobAnalyzerAgent`: LLM-backed extraction of structured job requirements.
+- `CVGeneratorAgent`: LLM-backed generation of tailored CV content.
+- `DocFormatterAgent`: deterministic Google Docs creation and formatting, no LLM.
 
 See `.specs/` for detailed specifications.
 
